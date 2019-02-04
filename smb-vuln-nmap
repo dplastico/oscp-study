@@ -1,0 +1,4 @@
+#!/bin/bash
+
+for vulns in $(cat vulnsmb.txt);do nmap 192.168.45.67 -p 445,139 --script=$vulns > 192.168.45.67/smbvulns.txt; 
+done
